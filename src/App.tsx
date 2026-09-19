@@ -19,6 +19,7 @@ export default function App() {
           <MusicPlayer />
         </>
       )}
+      <div id="top" />
       <Hero />
       <Moments />
       <BigDay />

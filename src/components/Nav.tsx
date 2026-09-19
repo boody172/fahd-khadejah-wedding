@@ -19,11 +19,7 @@ export default function Nav() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5">
         <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
+          href="#top"
           className="font-script inline-block py-1 text-4xl leading-[1.3] text-[var(--gold-light)]"
         >
           F<span className="mx-1 text-white/70">&amp;</span>K
