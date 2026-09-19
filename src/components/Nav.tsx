@@ -18,7 +18,14 @@ export default function Nav() {
       className={`fixed inset-x-0 top-0 z-40 py-5 transition-colors duration-500 ${scrolled ? 'bg-[var(--navy-deep)]/80 backdrop-blur' : ''}`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5">
-        <a href="#" className="font-script text-3xl leading-none text-[var(--gold-light)]">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="font-script text-3xl leading-none text-[var(--gold-light)]"
+        >
           F<span className="mx-1 text-white/70">&amp;</span>K
         </a>
         <nav className="hidden items-center gap-8 md:flex">
