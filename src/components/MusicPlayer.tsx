@@ -14,12 +14,18 @@ export default function MusicPlayer() {
     } else {
       el.play().catch(() => {});
     }
-    setPlaying(!playing);
   };
 
   return (
     <>
-      <audio ref={audioRef} src="/music/theme.mp3" loop preload="none" />
+      <audio
+        ref={audioRef}
+        src="/music/theme.wav"
+        loop
+        preload="none"
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+      />
       <motion.button
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
