@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Clouds from './Clouds';
 
@@ -15,11 +15,25 @@ const STARS = Array.from({ length: 28 }, (_, i) => ({
 export default function CloudGate({ onRevealed }: { onRevealed?: () => void }) {
   const [phase, setPhase] = useState<Phase>('gate');
 
+  // Lock the page at the very top while the gate is up, so the reveal always
+  // lands on the beginning of the Hero section rather than wherever a stray
+  // scroll (touch drag, focus-into-view) left it.
+  useEffect(() => {
+    if (phase === 'revealed') return;
+    window.scrollTo(0, 0);
+    const { overflow } = document.documentElement.style;
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      document.documentElement.style.overflow = overflow;
+    };
+  }, [phase]);
+
   const beginDescent = () => {
     if (phase !== 'gate') return;
     setPhase('falling');
     window.setTimeout(() => setPhase('whiteout'), 1100);
     window.setTimeout(() => {
+      window.scrollTo(0, 0);
       setPhase('revealed');
       onRevealed?.();
     }, 1300);
