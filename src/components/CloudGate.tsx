@@ -97,7 +97,7 @@ export default function CloudGate({ onRevealed }: { onRevealed?: () => void }) {
             <p className="font-sans text-[10px] uppercase tracking-[0.6em] text-[var(--gold-light)]">
               With love, an invitation
             </p>
-            <h1 className="font-script mt-4 text-[clamp(3.5rem,14vw,8rem)] leading-[0.9] text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+            <h1 className="font-script mt-4 px-2 py-2 text-[clamp(3.2rem,12vw,7.5rem)] leading-[1.25] text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
               Fahd <span className="text-[var(--gold-light)]">&amp;</span> Khadejah
             </h1>
             <p className="mt-5 font-sans text-xs uppercase tracking-[0.5em] text-white/80">

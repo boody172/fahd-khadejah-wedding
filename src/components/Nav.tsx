@@ -24,7 +24,7 @@ export default function Nav() {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="font-script text-3xl leading-none text-[var(--gold-light)]"
+          className="font-script inline-block py-1 text-4xl leading-[1.3] text-[var(--gold-light)]"
         >
           F<span className="mx-1 text-white/70">&amp;</span>K
         </a>

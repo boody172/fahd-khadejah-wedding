@@ -49,7 +49,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.7 }}
           className="mt-8"
         >
-          <h1 className="font-script text-[clamp(2.8rem,9vw,5.5rem)] leading-[0.95] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+          <h1 className="font-script px-2 py-1 text-[clamp(2.6rem,8vw,5.2rem)] leading-[1.3] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
             Fahd <span className="text-[var(--gold-light)]">&amp;</span> Khadejah
           </h1>
           <p className="mt-4 font-serif text-base italic text-white/80 sm:text-lg">
