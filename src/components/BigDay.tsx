@@ -36,7 +36,7 @@ export default function BigDay() {
 
       <div className="mx-auto max-w-4xl px-6 text-center">
         <p className="font-sans text-[10px] uppercase tracking-[0.55em] text-[var(--gold-light)]">Chapter Two</p>
-        <h2 className="font-script mt-4 text-6xl text-white sm:text-7xl">The Big Day</h2>
+        <h2 className="font-display mt-4 text-5xl text-white sm:text-6xl">The Big Day</h2>
         <div className="gold-divider mx-auto mt-6 w-32" />
       </div>
 
@@ -95,7 +95,7 @@ export default function BigDay() {
                 <MapPin size={20} />
               </div>
               <p className="mt-5 font-sans text-[10px] uppercase tracking-[0.45em] text-[var(--gold)]">Venue</p>
-              <h3 className="font-script mt-2 text-5xl text-[var(--navy)]">قاعة الشرقية للمناسبات</h3>
+              <h3 className="font-arabic mt-2 text-3xl text-[var(--navy)] sm:text-4xl">قاعة الشرقية للمناسبات</h3>
               <p className="mt-3 font-serif text-base text-[var(--plum)]/75">Dammam · Eastern Province<br />Saudi Arabia</p>
               <a
                 href={MAPS_SHORT_LINK}

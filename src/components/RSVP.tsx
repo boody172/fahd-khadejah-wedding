@@ -56,7 +56,7 @@ export default function RSVP() {
 
       <div className="mx-auto max-w-2xl px-6 text-center">
         <p className="font-sans text-[10px] uppercase tracking-[0.55em] text-[var(--dusk)]">Kindly Respond</p>
-        <h2 className="font-script mt-4 text-6xl text-[var(--navy)] sm:text-7xl">RSVP</h2>
+        <h2 className="font-display mt-4 text-5xl text-[var(--navy)] sm:text-6xl">RSVP</h2>
         <div className="gold-divider mx-auto mt-6 w-32" />
         <p className="mx-auto mt-6 max-w-md font-serif text-base italic text-[var(--plum)]/75">
           Your presence is the greatest gift. Please reply by December 1, 2026.

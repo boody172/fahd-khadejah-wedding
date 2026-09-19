@@ -6,11 +6,11 @@ import aisleWalk from '../assets/couple/aisle-walk.jpg';
 import signingCrowd from '../assets/couple/signing-crowd.jpg';
 
 const photos = [
-  { src: signingTable, caption: 'Sealed with a signature', span: 'sm:col-span-2 sm:row-span-2' },
-  { src: ringExchange, caption: 'The exchange of rings', span: '' },
-  { src: laughingTable, caption: 'Joy, shared', span: '' },
-  { src: aisleWalk, caption: 'Walking forward, together', span: 'sm:col-span-2' },
-  { src: signingCrowd, caption: 'Witnessed with love', span: '' },
+  { src: signingTable, caption: 'Sealed with a signature' },
+  { src: ringExchange, caption: 'The exchange of rings' },
+  { src: laughingTable, caption: 'Joy, shared' },
+  { src: aisleWalk, caption: 'Walking forward, together' },
+  { src: signingCrowd, caption: 'Witnessed with love' },
 ];
 
 export default function Moments() {
@@ -30,14 +30,15 @@ export default function Moments() {
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-          className="font-script mt-4 text-6xl text-[var(--navy)] sm:text-7xl"
+          className="font-display mt-4 text-5xl text-[var(--navy)] sm:text-6xl"
         >
           Our Moments
         </motion.h2>
         <div className="gold-divider mx-auto mt-6 w-32" />
       </div>
 
-      <div className="mx-auto mt-16 grid max-w-5xl auto-rows-[220px] grid-cols-2 gap-4 px-6 sm:grid-cols-4">
+      {/* Masonry columns — images keep their natural proportions, nothing is cropped */}
+      <div className="mx-auto mt-16 max-w-5xl columns-2 gap-4 px-6 sm:columns-3 [&>*]:mb-4">
         {photos.map((p, i) => (
           <motion.figure
             key={p.caption}
@@ -46,13 +47,13 @@ export default function Moments() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, delay: i * 0.1, ease: 'easeOut' }}
             whileHover={{ scale: 1.02 }}
-            className={`group relative overflow-hidden rounded-2xl shadow-[0_25px_50px_-20px_rgba(27,35,64,0.4)] ${p.span}`}
+            className="group relative break-inside-avoid overflow-hidden rounded-2xl shadow-[0_25px_50px_-20px_rgba(27,35,64,0.4)]"
           >
             <img
               src={p.src}
               alt={p.caption}
               loading={i < 2 ? 'eager' : 'lazy'}
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+              className="block h-auto w-full transition duration-700 group-hover:scale-105"
               draggable={false}
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--navy-deep)]/70 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />

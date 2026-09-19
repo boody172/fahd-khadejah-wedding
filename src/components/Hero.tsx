@@ -34,7 +34,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
-          className="relative mt-8 h-[26rem] w-[19rem] overflow-hidden rounded-t-full border-4 border-[var(--gold-light)]/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.7)] sm:h-[30rem] sm:w-[22rem]"
+          className="relative mt-8 h-[32rem] w-[18rem] overflow-hidden rounded-t-full border-4 border-[var(--gold-light)]/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.7)] sm:h-[36rem] sm:w-[20rem]"
         >
           <img
             src={portraitSeated}
